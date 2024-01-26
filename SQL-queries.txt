@@ -1,0 +1,61 @@
+Find the top 5 common Winning Numbers
+
+WITH numbers AS (
+  SELECT 1 AS num UNION ALL
+  SELECT 2 UNION ALL
+  SELECT 3 UNION ALL
+  SELECT 4 UNION ALL
+  SELECT 5
+)
+
+SELECT individual_number, COUNT(individual_number) as frequency
+FROM (
+  SELECT TRIM(SPLIT_PART(winning_numbers, ' ', num)) as individual_number
+  FROM lottery_table
+  CROSS JOIN numbers
+) AS subquery
+GROUP BY individual_number
+ORDER BY frequency DESC
+LIMIT 5;
+
+Calculate the Average Multiplier Value
+
+SELECT AVG(CAST(
+    CASE
+        WHEN TRY_CAST(Multiplier AS DECIMAL(10, 2)) IS NOT NULL THEN Multiplier
+        ELSE NULL
+    END AS DECIMAL(10, 2))) AS average_multiplier
+FROM lottery_table;
+
+Identify the top 5 Mega Ball Numbers
+
+SELECT
+    mega_ball,
+    COUNT(*) AS frequency
+FROM
+    lottery_table 
+GROUP BY
+    mega_ball
+ORDER BY
+    frequency DESC
+LIMIT 5;
+
+
+How many of the lotteries were drawn on a weekday vs weekend
+
+WITH date_data AS (
+    SELECT
+        draw_date,
+        CASE
+            WHEN DAY_OF_WEEK(DATE_PARSE(draw_date, '%m/%d/%Y')) IN (1, 7) THEN 'Weekend'
+            ELSE 'Weekday'
+        END AS day_type
+    FROM lottery_table
+)
+
+SELECT
+    day_type,
+    COUNT(*) AS draw_count
+FROM date_data
+WHERE day_type IS NOT NULL
+GROUP BY day_type;

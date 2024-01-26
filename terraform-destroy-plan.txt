@@ -1,0 +1,1525 @@
+terraform plan -destroy
+data.aws_availability_zones.available: Reading...
+aws_iam_policy.ecs_task_policy: Refreshing state... [id=arn:aws:iam::211125356430:policy/ecs-task-policy]
+aws_kms_key.example_s3_key: Refreshing state... [id=d2c788b8-78c7-4f13-9d3a-72997fb07ca5]
+aws_cloudwatch_log_group.ecs_logs: Refreshing state... [id=/ecs/superset-k]
+aws_iam_user.example_user: Refreshing state... [id=example-user]
+aws_iam_role.ecs_execution_role: Refreshing state... [id=superset-k-execution-role]
+aws_iam_role.ecs_task_role: Refreshing state... [id=superset-k-task-role]
+aws_iam_role.athena_role: Refreshing state... [id=AthenaSuperSetRole]
+module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0f97fdc683edc5c60]
+aws_s3_bucket.example_s3_bucket: Refreshing state... [id=jiham-k-test]
+aws_iam_policy.ecs_logging_policy: Refreshing state... [id=arn:aws:iam::211125356430:policy/ecs-logging-policy]
+data.aws_availability_zones.available: Read complete after 0s [id=us-east-2]
+aws_ecs_cluster.superset_cluster: Refreshing state... [id=arn:aws:ecs:us-east-2:211125356430:cluster/superset-k-cluster]
+aws_ecr_repository.superset_repository: Refreshing state... [id=superset-repository]
+aws_iam_access_key.user_key: Refreshing state... [id=AKIATCKANI6HFUXZSPWC]
+aws_iam_role_policy_attachment.ecs_task_policy_attachment: Refreshing state... [id=superset-k-task-role-20240125121904097800000001]
+aws_iam_policy.assume_role_policy: Refreshing state... [id=arn:aws:iam::211125356430:policy/assume_athena_role_policy]
+aws_iam_role_policy_attachment.ecs_execution_role_policy: Refreshing state... [id=superset-k-execution-role-20240125090625155800000001]
+aws_iam_role_policy_attachment.ecs_logging_policy_attach: Refreshing state... [id=superset-k-execution-role-20240125095104659000000001]
+aws_iam_user_policy_attachment.test_attach: Refreshing state... [id=example-user-20240125082415918300000001]
+aws_ecs_task_definition.superset_task: Refreshing state... [id=superset-k]
+module.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-047183d0e28b94b0a]
+module.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-0c6e43f33bc201939]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-0c47bd06812471115]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-00436ce16e8ecd088]
+aws_lb_target_group.superset_tg: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:211125356430:targetgroup/superset-tg/6611c3ac71ebb934]
+aws_security_group.superset_sg: Refreshing state... [id=sg-04b3afdc74f1c1644]
+aws_security_group.superset_lb_sg: Refreshing state... [id=sg-0f643b5e59132f03c]
+module.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-0dfeab17cbe30c818]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0fd7910f4a33e07fa]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0bd73dbe52186e6db]
+module.vpc.aws_subnet.public[2]: Refreshing state... [id=subnet-0c7072ce65f5ac2ba]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-04fb9887a7d2737f7]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-03a50499fc00b9cbc]
+module.vpc.aws_subnet.private[2]: Refreshing state... [id=subnet-0d80d9c71b023fde0]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-0744c5f9b011ff88c]
+aws_iam_policy.athena_s3_policy: Refreshing state... [id=arn:aws:iam::211125356430:policy/AthenaS3AccessPolicy]
+aws_s3_bucket_ownership_controls.example_s3_ownership: Refreshing state... [id=jiham-k-test]
+aws_s3_bucket_versioning.example_s3_versioning: Refreshing state... [id=jiham-k-test]
+aws_athena_database.lottery_database: Refreshing state... [id=lottery_database]
+aws_s3_bucket_lifecycle_configuration.example_s3_lifecycle: Refreshing state... [id=jiham-k-test]
+aws_s3_bucket_server_side_encryption_configuration.example_s3_sse: Refreshing state... [id=jiham-k-test]
+aws_s3_object.lottery_csv: Refreshing state... [id=example_file.csv]
+aws_iam_policy.athena_s3_access: Refreshing state... [id=arn:aws:iam::211125356430:policy/athena_s3_access]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-00436ce16e8ecd0881080289494]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-0f93760b6bdd30ba8]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-0e655a828f0097ea8]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-05dece102d5a55afc]
+module.vpc.aws_route_table_association.public[2]: Refreshing state... [id=rtbassoc-07c688dc8f18987c5]
+module.vpc.aws_route_table_association.private[2]: Refreshing state... [id=rtbassoc-044ad58594443a71f]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-02c7574a683645f09]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-087ad08a076e0177d]
+aws_s3_bucket_acl.example_s3_acl: Refreshing state... [id=jiham-k-test,private]
+aws_lb.superset_alb: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:211125356430:loadbalancer/app/superset-alb/574bbcf08918fa49]
+aws_iam_role_policy_attachment.attach_athena_s3: Refreshing state... [id=AthenaSuperSetRole-20240124092737040800000001]
+aws_ecs_service.superset_service: Refreshing state... [id=arn:aws:ecs:us-east-2:211125356430:service/superset-k-cluster/superset-k-service]
+aws_athena_named_query.create_lottery_table: Refreshing state... [id=199bb518-a623-490d-967e-3d39b231839a]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-03815849f6f2fb8b7]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-0744c5f9b011ff88c1080289494]
+aws_lb_listener.superset_listener: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-2:211125356430:listener/app/superset-alb/574bbcf08918fa49/6bb54fc689c9c88c]
+
+Terraform used the selected providers to generate the following execution plan.
+Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_athena_database.lottery_database will be destroyed
+  - resource "aws_athena_database" "lottery_database" {
+      - bucket        = "jiham-k-test" -> null
+      - force_destroy = false -> null
+      - id            = "lottery_database" -> null
+      - name          = "lottery_database" -> null
+      - properties    = {} -> null
+    }
+
+  # aws_athena_named_query.create_lottery_table will be destroyed
+  - resource "aws_athena_named_query" "create_lottery_table" {
+      - database  = "lottery_database" -> null
+      - id        = "199bb518-a623-490d-967e-3d39b231839a" -> null
+      - name      = "create_lottery_table" -> null
+      - query     = <<-EOT
+            CREATE EXTERNAL TABLE IF NOT EXISTS lottery_table (
+              draw_date string,
+              winning_numbers string,
+              mega_ball string,
+              multiplier string
+            )
+            ROW FORMAT DELIMITED 
+            FIELDS TERMINATED BY ',' 
+            LINES TERMINATED BY '\n' 
+            STORED AS TEXTFILE
+            LOCATION 's3://jiham-k-test/';
+        EOT -> null
+      - workgroup = "primary" -> null
+    }
+
+  # aws_cloudwatch_log_group.ecs_logs will be destroyed
+  - resource "aws_cloudwatch_log_group" "ecs_logs" {
+      - arn               = "arn:aws:logs:us-east-2:211125356430:log-group:/ecs/superset-k" -> null
+      - id                = "/ecs/superset-k" -> null
+      - log_group_class   = "STANDARD" -> null
+      - name              = "/ecs/superset-k" -> null
+      - retention_in_days = 0 -> null
+      - skip_destroy      = false -> null
+      - tags              = {} -> null
+      - tags_all          = {} -> null
+    }
+
+  # aws_ecr_repository.superset_repository will be destroyed
+  - resource "aws_ecr_repository" "superset_repository" {
+      - arn                  = "arn:aws:ecr:us-east-2:211125356430:repository/superset-repository" -> null
+      - id                   = "superset-repository" -> null
+      - image_tag_mutability = "MUTABLE" -> null
+      - name                 = "superset-repository" -> null
+      - registry_id          = "211125356430" -> null
+      - repository_url       = "211125356430.dkr.ecr.us-east-2.amazonaws.com/superset-repository" -> null
+      - tags                 = {} -> null
+      - tags_all             = {} -> null
+
+      - encryption_configuration {
+          - encryption_type = "AES256" -> null
+        }
+
+      - image_scanning_configuration {
+          - scan_on_push = false -> null
+        }
+    }
+
+  # aws_ecs_cluster.superset_cluster will be destroyed
+  - resource "aws_ecs_cluster" "superset_cluster" {
+      - arn      = "arn:aws:ecs:us-east-2:211125356430:cluster/superset-k-cluster" -> null
+      - id       = "arn:aws:ecs:us-east-2:211125356430:cluster/superset-k-cluster" -> null
+      - name     = "superset-k-cluster" -> null
+      - tags     = {} -> null
+      - tags_all = {} -> null
+
+      - setting {
+          - name  = "containerInsights" -> null
+          - value = "disabled" -> null
+        }
+    }
+
+  # aws_ecs_service.superset_service will be destroyed
+  - resource "aws_ecs_service" "superset_service" {
+      - cluster                            = "arn:aws:ecs:us-east-2:211125356430:cluster/superset-k-cluster" -> null
+      - deployment_maximum_percent         = 200 -> null
+      - deployment_minimum_healthy_percent = 100 -> null
+      - desired_count                      = 1 -> null
+      - enable_ecs_managed_tags            = false -> null
+      - enable_execute_command             = false -> null
+      - health_check_grace_period_seconds  = 0 -> null
+      - iam_role                           = "/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS" -> null
+      - id                                 = "arn:aws:ecs:us-east-2:211125356430:service/superset-k-cluster/superset-k-service" -> null
+      - launch_type                        = "FARGATE" -> null
+      - name                               = "superset-k-service" -> null
+      - platform_version                   = "LATEST" -> null
+      - propagate_tags                     = "NONE" -> null
+      - scheduling_strategy                = "REPLICA" -> null
+      - tags                               = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all                           = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - task_definition                    = "arn:aws:ecs:us-east-2:211125356430:task-definition/superset-k:4" -> null
+      - triggers                           = {} -> null
+      - wait_for_steady_state              = false -> null
+
+      - deployment_circuit_breaker {
+          - enable   = false -> null
+          - rollback = false -> null
+        }
+
+      - deployment_controller {
+          - type = "ECS" -> null
+        }
+
+      - load_balancer {
+          - container_name   = "superset-c" -> null
+          - container_port   = 8088 -> null
+          - target_group_arn = "arn:aws:elasticloadbalancing:us-east-2:211125356430:targetgroup/superset-tg/6611c3ac71ebb934" -> null
+        }
+
+      - network_configuration {
+          - assign_public_ip = false -> null
+          - security_groups  = [
+              - "sg-04b3afdc74f1c1644",
+            ] -> null
+          - subnets          = [
+              - "subnet-03a50499fc00b9cbc",
+              - "subnet-04fb9887a7d2737f7",
+              - "subnet-0d80d9c71b023fde0",
+            ] -> null
+        }
+    }
+
+  # aws_ecs_task_definition.superset_task will be destroyed
+  - resource "aws_ecs_task_definition" "superset_task" {
+      - arn                      = "arn:aws:ecs:us-east-2:211125356430:task-definition/superset-k:4" -> null
+      - arn_without_revision     = "arn:aws:ecs:us-east-2:211125356430:task-definition/superset-k" -> null
+      - container_definitions    = jsonencode(
+            [
+              - {
+                  - cpu              = 0
+                  - environment      = [
+                      - {
+                          - name  = "SUPERSET_SECRET_KEY"
+                          - value = "your_secret_key_here"
+                        },
+                    ]
+                  - essential        = true
+                  - image            = "211125356430.dkr.ecr.us-east-2.amazonaws.com/superset-repository:latest"
+                  - logConfiguration = {
+                      - logDriver = "awslogs"
+                      - options   = {
+                          - awslogs-group         = "/ecs/superset-k"
+                          - awslogs-region        = "us-east-2"
+                          - awslogs-stream-prefix = "ecs"
+                        }
+                    }
+                  - mountPoints      = []
+                  - name             = "superset-c"
+                  - portMappings     = [
+                      - {
+                          - containerPort = 8088
+                          - hostPort      = 8088
+                          - protocol      = "tcp"
+                        },
+                    ]
+                  - volumesFrom      = []
+                },
+            ]
+        ) -> null
+      - cpu                      = "1024" -> null
+      - execution_role_arn       = "arn:aws:iam::211125356430:role/superset-k-execution-role" -> null
+      - family                   = "superset-k" -> null
+      - id                       = "superset-k" -> null
+      - memory                   = "2048" -> null
+      - network_mode             = "awsvpc" -> null
+      - requires_compatibilities = [
+          - "FARGATE",
+        ] -> null
+      - revision                 = 4 -> null
+      - skip_destroy             = false -> null
+      - tags                     = {} -> null
+      - tags_all                 = {} -> null
+      - task_role_arn            = "arn:aws:iam::211125356430:role/superset-k-task-role" -> null
+    }
+
+  # aws_iam_access_key.user_key will be destroyed
+  - resource "aws_iam_access_key" "user_key" {
+      - create_date          = "2024-01-24T09:34:19Z" -> null
+      - id                   = "AKIATCKANI6HFUXZSPWC" -> null
+      - secret               = (sensitive value) -> null
+      - ses_smtp_password_v4 = (sensitive value) -> null
+      - status               = "Active" -> null
+      - user                 = "example-user" -> null
+    }
+
+  # aws_iam_policy.assume_role_policy will be destroyed
+  - resource "aws_iam_policy" "assume_role_policy" {
+      - arn         = "arn:aws:iam::211125356430:policy/assume_athena_role_policy" -> null
+      - description = "A test policy that allows a user to assume a role" -> null
+      - id          = "arn:aws:iam::211125356430:policy/assume_athena_role_policy" -> null
+      - name        = "assume_athena_role_policy" -> null
+      - path        = "/" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = "sts:AssumeRole"
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:iam::211125356430:role/AthenaSuperSetRole"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - policy_id   = "ANPATCKANI6HE5OK5LVDN" -> null
+      - tags        = {} -> null
+      - tags_all    = {} -> null
+    }
+
+  # aws_iam_policy.athena_s3_access will be destroyed
+  - resource "aws_iam_policy" "athena_s3_access" {
+      - arn         = "arn:aws:iam::211125356430:policy/athena_s3_access" -> null
+      - description = "Policy for Athena to access S3 data" -> null
+      - id          = "arn:aws:iam::211125356430:policy/athena_s3_access" -> null
+      - name        = "athena_s3_access" -> null
+      - path        = "/" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = [
+                          - "s3:*",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = [
+                          - "arn:aws:s3:::jiham-k-test",
+                          - "arn:aws:s3:::jiham-k-test/*",
+                        ]
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - policy_id   = "ANPATCKANI6HETZJT7FTS" -> null
+      - tags        = {} -> null
+      - tags_all    = {} -> null
+    }
+
+  # aws_iam_policy.athena_s3_policy will be destroyed
+  - resource "aws_iam_policy" "athena_s3_policy" {
+      - arn         = "arn:aws:iam::211125356430:policy/AthenaS3AccessPolicy" -> null
+      - description = "Policy for Athena to access S3 Bucket" -> null
+      - id          = "arn:aws:iam::211125356430:policy/AthenaS3AccessPolicy" -> null
+      - name        = "AthenaS3AccessPolicy" -> null
+      - path        = "/" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = [
+                          - "s3:GetObject",
+                          - "s3:ListBucket",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = [
+                          - "arn:aws:s3:::jiham-k-test",
+                          - "arn:aws:s3:::jiham-k-test/*",
+                        ]
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - policy_id   = "ANPATCKANI6HC65PF7JR7" -> null
+      - tags        = {} -> null
+      - tags_all    = {} -> null
+    }
+
+  # aws_iam_policy.ecs_logging_policy will be destroyed
+  - resource "aws_iam_policy" "ecs_logging_policy" {
+      - arn         = "arn:aws:iam::211125356430:policy/ecs-logging-policy" -> null
+      - description = "Allow ECS tasks to send logs to CloudWatch" -> null
+      - id          = "arn:aws:iam::211125356430:policy/ecs-logging-policy" -> null
+      - name        = "ecs-logging-policy" -> null
+      - path        = "/" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = [
+                          - "logs:CreateLogStream",
+                          - "logs:PutLogEvents",
+                          - "logs:CreateLogGroup",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:logs:*:*:*"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - policy_id   = "ANPATCKANI6HANQFXTXC4" -> null
+      - tags        = {} -> null
+      - tags_all    = {} -> null
+    }
+
+  # aws_iam_policy.ecs_task_policy will be destroyed
+  - resource "aws_iam_policy" "ecs_task_policy" {
+      - arn         = "arn:aws:iam::211125356430:policy/ecs-task-policy" -> null
+      - description = "Policy to allow ECS tasks to access Athena and S3" -> null
+      - id          = "arn:aws:iam::211125356430:policy/ecs-task-policy" -> null
+      - name        = "ecs-task-policy" -> null
+      - path        = "/" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = [
+                          - "athena:*",
+                          - "glue:*",
+                          - "s3:GetObject",
+                          - "s3:PutObject",
+                          - "s3:ListBucket",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "*"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - policy_id   = "ANPATCKANI6HPVYYIZYJG" -> null
+      - tags        = {} -> null
+      - tags_all    = {} -> null
+    }
+
+  # aws_iam_role.athena_role will be destroyed
+  - resource "aws_iam_role" "athena_role" {
+      - arn                   = "arn:aws:iam::211125356430:role/AthenaSuperSetRole" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "athena.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2024-01-24T09:27:00Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "AthenaSuperSetRole" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::211125356430:policy/AthenaS3AccessPolicy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "AthenaSuperSetRole" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {} -> null
+      - unique_id             = "AROATCKANI6HC4GZXTT3Z" -> null
+    }
+
+  # aws_iam_role.ecs_execution_role will be destroyed
+  - resource "aws_iam_role" "ecs_execution_role" {
+      - arn                   = "arn:aws:iam::211125356430:role/superset-k-execution-role" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ecs-tasks.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2024-01-25T09:06:24Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "superset-k-execution-role" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::211125356430:policy/ecs-logging-policy",
+          - "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "superset-k-execution-role" -> null
+      - path                  = "/" -> null
+      - tags                  = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all              = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - unique_id             = "AROATCKANI6HLVFNCNKBX" -> null
+    }
+
+  # aws_iam_role.ecs_task_role will be destroyed
+  - resource "aws_iam_role" "ecs_task_role" {
+      - arn                   = "arn:aws:iam::211125356430:role/superset-k-task-role" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ecs-tasks.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2024-01-25T12:19:03Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "superset-k-task-role" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::211125356430:policy/ecs-task-policy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "superset-k-task-role" -> null
+      - path                  = "/" -> null
+      - tags                  = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all              = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - unique_id             = "AROATCKANI6HP2AN46YUF" -> null
+    }
+
+  # aws_iam_role_policy_attachment.attach_athena_s3 will be destroyed
+  - resource "aws_iam_role_policy_attachment" "attach_athena_s3" {
+      - id         = "AthenaSuperSetRole-20240124092737040800000001" -> null
+      - policy_arn = "arn:aws:iam::211125356430:policy/AthenaS3AccessPolicy" -> null
+      - role       = "AthenaSuperSetRole" -> null
+    }
+
+  # aws_iam_role_policy_attachment.ecs_execution_role_policy will be destroyed
+  - resource "aws_iam_role_policy_attachment" "ecs_execution_role_policy" {
+      - id         = "superset-k-execution-role-20240125090625155800000001" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy" -> null
+      - role       = "superset-k-execution-role" -> null
+    }
+
+  # aws_iam_role_policy_attachment.ecs_logging_policy_attach will be destroyed
+  - resource "aws_iam_role_policy_attachment" "ecs_logging_policy_attach" {
+      - id         = "superset-k-execution-role-20240125095104659000000001" -> null
+      - policy_arn = "arn:aws:iam::211125356430:policy/ecs-logging-policy" -> null
+      - role       = "superset-k-execution-role" -> null
+    }
+
+  # aws_iam_role_policy_attachment.ecs_task_policy_attachment will be destroyed
+  - resource "aws_iam_role_policy_attachment" "ecs_task_policy_attachment" {
+      - id         = "superset-k-task-role-20240125121904097800000001" -> null
+      - policy_arn = "arn:aws:iam::211125356430:policy/ecs-task-policy" -> null
+      - role       = "superset-k-task-role" -> null
+    }
+
+  # aws_iam_user.example_user will be destroyed
+  - resource "aws_iam_user" "example_user" {
+      - arn           = "arn:aws:iam::211125356430:user/example-user" -> null
+      - force_destroy = false -> null
+      - id            = "example-user" -> null
+      - name          = "example-user" -> null
+      - path          = "/" -> null
+      - tags          = {} -> null
+      - tags_all      = {} -> null
+      - unique_id     = "AIDATCKANI6HNBFTFXRMS" -> null
+    }
+
+  # aws_iam_user_policy_attachment.test_attach will be destroyed
+  - resource "aws_iam_user_policy_attachment" "test_attach" {
+      - id         = "example-user-20240125082415918300000001" -> null
+      - policy_arn = "arn:aws:iam::211125356430:policy/assume_athena_role_policy" -> null
+      - user       = "example-user" -> null
+    }
+
+  # aws_kms_key.example_s3_key will be destroyed
+  - resource "aws_kms_key" "example_s3_key" {
+      - arn                                = "arn:aws:kms:us-east-2:211125356430:key/d2c788b8-78c7-4f13-9d3a-72997fb07ca5" -> null
+      - bypass_policy_lockout_safety_check = false -> null
+      - customer_master_key_spec           = "SYMMETRIC_DEFAULT" -> null
+      - deletion_window_in_days            = 10 -> null
+      - description                        = "KMS key for S3 bucket encryption" -> null
+      - enable_key_rotation                = false -> null
+      - id                                 = "d2c788b8-78c7-4f13-9d3a-72997fb07ca5" -> null
+      - is_enabled                         = true -> null
+      - key_id                             = "d2c788b8-78c7-4f13-9d3a-72997fb07ca5" -> null
+      - key_usage                          = "ENCRYPT_DECRYPT" -> null
+      - multi_region                       = false -> null
+      - policy                             = jsonencode(
+            {
+              - Id        = "key-default-1"
+              - Statement = [
+                  - {
+                      - Action    = "kms:*"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - AWS = "arn:aws:iam::211125356430:root"
+                        }
+                      - Resource  = "*"
+                      - Sid       = "Enable IAM User Permissions"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - tags                               = {} -> null
+      - tags_all                           = {} -> null
+    }
+
+  # aws_lb.superset_alb will be destroyed
+  - resource "aws_lb" "superset_alb" {
+      - arn                                         = "arn:aws:elasticloadbalancing:us-east-2:211125356430:loadbalancer/app/superset-alb/574bbcf08918fa49" -> null
+      - arn_suffix                                  = "app/superset-alb/574bbcf08918fa49" -> null
+      - desync_mitigation_mode                      = "defensive" -> null
+      - dns_name                                    = "superset-alb-315046454.us-east-2.elb.amazonaws.com" -> null
+      - drop_invalid_header_fields                  = false -> null
+      - enable_cross_zone_load_balancing            = true -> null
+      - enable_deletion_protection                  = false -> null
+      - enable_http2                                = true -> null
+      - enable_tls_version_and_cipher_suite_headers = false -> null
+      - enable_waf_fail_open                        = false -> null
+      - enable_xff_client_port                      = false -> null
+      - id                                          = "arn:aws:elasticloadbalancing:us-east-2:211125356430:loadbalancer/app/superset-alb/574bbcf08918fa49" -> null
+      - idle_timeout                                = 60 -> null
+      - internal                                    = false -> null
+      - ip_address_type                             = "ipv4" -> null
+      - load_balancer_type                          = "application" -> null
+      - name                                        = "superset-alb" -> null
+      - preserve_host_header                        = false -> null
+      - security_groups                             = [
+          - "sg-0f643b5e59132f03c",
+        ] -> null
+      - subnets                                     = [
+          - "subnet-0bd73dbe52186e6db",
+          - "subnet-0c7072ce65f5ac2ba",
+          - "subnet-0fd7910f4a33e07fa",
+        ] -> null
+      - tags                                        = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all                                    = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                                      = "vpc-0f97fdc683edc5c60" -> null
+      - xff_header_processing_mode                  = "append" -> null
+      - zone_id                                     = "Z3AADJGX6KTTL2" -> null
+
+      - access_logs {
+          - enabled = false -> null
+        }
+
+      - subnet_mapping {
+          - subnet_id = "subnet-0bd73dbe52186e6db" -> null
+        }
+      - subnet_mapping {
+          - subnet_id = "subnet-0c7072ce65f5ac2ba" -> null
+        }
+      - subnet_mapping {
+          - subnet_id = "subnet-0fd7910f4a33e07fa" -> null
+        }
+    }
+
+  # aws_lb_listener.superset_listener will be destroyed
+  - resource "aws_lb_listener" "superset_listener" {
+      - arn               = "arn:aws:elasticloadbalancing:us-east-2:211125356430:listener/app/superset-alb/574bbcf08918fa49/6bb54fc689c9c88c" -> null
+      - id                = "arn:aws:elasticloadbalancing:us-east-2:211125356430:listener/app/superset-alb/574bbcf08918fa49/6bb54fc689c9c88c" -> null
+      - load_balancer_arn = "arn:aws:elasticloadbalancing:us-east-2:211125356430:loadbalancer/app/superset-alb/574bbcf08918fa49" -> null
+      - port              = 80 -> null
+      - protocol          = "HTTP" -> null
+      - tags              = {} -> null
+      - tags_all          = {} -> null
+
+      - default_action {
+          - order            = 1 -> null
+          - target_group_arn = "arn:aws:elasticloadbalancing:us-east-2:211125356430:targetgroup/superset-tg/6611c3ac71ebb934" -> null
+          - type             = "forward" -> null
+        }
+    }
+
+  # aws_lb_target_group.superset_tg will be destroyed
+  - resource "aws_lb_target_group" "superset_tg" {
+      - arn                                = "arn:aws:elasticloadbalancing:us-east-2:211125356430:targetgroup/superset-tg/6611c3ac71ebb934" -> null
+      - arn_suffix                         = "targetgroup/superset-tg/6611c3ac71ebb934" -> null
+      - deregistration_delay               = "300" -> null
+      - id                                 = "arn:aws:elasticloadbalancing:us-east-2:211125356430:targetgroup/superset-tg/6611c3ac71ebb934" -> null
+      - ip_address_type                    = "ipv4" -> null
+      - lambda_multi_value_headers_enabled = false -> null
+      - load_balancing_algorithm_type      = "round_robin" -> null
+      - load_balancing_cross_zone_enabled  = "use_load_balancer_configuration" -> null
+      - name                               = "superset-tg" -> null
+      - port                               = 8088 -> null
+      - protocol                           = "HTTP" -> null
+      - protocol_version                   = "HTTP1" -> null
+      - proxy_protocol_v2                  = false -> null
+      - slow_start                         = 0 -> null
+      - tags                               = {} -> null
+      - tags_all                           = {} -> null
+      - target_type                        = "ip" -> null
+      - vpc_id                             = "vpc-0f97fdc683edc5c60" -> null
+
+      - health_check {
+          - enabled             = true -> null
+          - healthy_threshold   = 2 -> null
+          - interval            = 40 -> null
+          - matcher             = "200-299" -> null
+          - path                = "/health" -> null
+          - port                = "traffic-port" -> null
+          - protocol            = "HTTP" -> null
+          - timeout             = 30 -> null
+          - unhealthy_threshold = 5 -> null
+        }
+
+      - stickiness {
+          - cookie_duration = 86400 -> null
+          - enabled         = false -> null
+          - type            = "lb_cookie" -> null
+        }
+
+      - target_failover {}
+
+      - target_health_state {}
+    }
+
+  # aws_s3_bucket.example_s3_bucket will be destroyed
+  - resource "aws_s3_bucket" "example_s3_bucket" {
+      - arn                         = "arn:aws:s3:::jiham-k-test" -> null
+      - bucket                      = "jiham-k-test" -> null
+      - bucket_domain_name          = "jiham-k-test.s3.amazonaws.com" -> null
+      - bucket_regional_domain_name = "jiham-k-test.s3.us-east-2.amazonaws.com" -> null
+      - force_destroy               = false -> null
+      - hosted_zone_id              = "Z2O1EMRO9K5GLX" -> null
+      - id                          = "jiham-k-test" -> null
+      - object_lock_enabled         = false -> null
+      - region                      = "us-east-2" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {} -> null
+      - tags_all                    = {} -> null
+
+      - grant {
+          - id          = "ce07785968967dc28ebd910c2968706f8aa46f4dd0f20460ea9d13cf5e2f1f63" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+        }
+
+      - lifecycle_rule {
+          - abort_incomplete_multipart_upload_days = 0 -> null
+          - enabled                                = true -> null
+          - id                                     = "rule-1" -> null
+          - tags                                   = {} -> null
+
+          - expiration {
+              - days                         = 90 -> null
+              - expired_object_delete_marker = false -> null
+            }
+
+          - transition {
+              - days          = 30 -> null
+              - storage_class = "STANDARD_IA" -> null
+            }
+          - transition {
+              - days          = 60 -> null
+              - storage_class = "GLACIER" -> null
+            }
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - kms_master_key_id = "arn:aws:kms:us-east-2:211125356430:key/d2c788b8-78c7-4f13-9d3a-72997fb07ca5" -> null
+                  - sse_algorithm     = "aws:kms" -> null
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = true -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # aws_s3_bucket_acl.example_s3_acl will be destroyed
+  - resource "aws_s3_bucket_acl" "example_s3_acl" {
+      - acl    = "private" -> null
+      - bucket = "jiham-k-test" -> null
+      - id     = "jiham-k-test,private" -> null
+
+      - access_control_policy {
+          - grant {
+              - permission = "FULL_CONTROL" -> null
+
+              - grantee {
+                  - id   = "ce07785968967dc28ebd910c2968706f8aa46f4dd0f20460ea9d13cf5e2f1f63" -> null
+                  - type = "CanonicalUser" -> null
+                }
+            }
+          - owner {
+              - id = "ce07785968967dc28ebd910c2968706f8aa46f4dd0f20460ea9d13cf5e2f1f63" -> null
+            }
+        }
+    }
+
+  # aws_s3_bucket_lifecycle_configuration.example_s3_lifecycle will be destroyed
+  - resource "aws_s3_bucket_lifecycle_configuration" "example_s3_lifecycle" {
+      - bucket = "jiham-k-test" -> null
+      - id     = "jiham-k-test" -> null
+
+      - rule {
+          - id     = "rule-1" -> null
+          - status = "Enabled" -> null
+
+          - expiration {
+              - days                         = 90 -> null
+              - expired_object_delete_marker = false -> null
+            }
+
+          - filter {
+            }
+
+          - transition {
+              - days          = 30 -> null
+              - storage_class = "STANDARD_IA" -> null
+            }
+          - transition {
+              - days          = 60 -> null
+              - storage_class = "GLACIER" -> null
+            }
+        }
+    }
+
+  # aws_s3_bucket_ownership_controls.example_s3_ownership will be destroyed
+  - resource "aws_s3_bucket_ownership_controls" "example_s3_ownership" {
+      - bucket = "jiham-k-test" -> null
+      - id     = "jiham-k-test" -> null
+
+      - rule {
+          - object_ownership = "BucketOwnerPreferred" -> null
+        }
+    }
+
+  # aws_s3_bucket_server_side_encryption_configuration.example_s3_sse will be destroyed
+  - resource "aws_s3_bucket_server_side_encryption_configuration" "example_s3_sse" {
+      - bucket = "jiham-k-test" -> null
+      - id     = "jiham-k-test" -> null
+
+      - rule {
+          - bucket_key_enabled = false -> null
+
+          - apply_server_side_encryption_by_default {
+              - kms_master_key_id = "arn:aws:kms:us-east-2:211125356430:key/d2c788b8-78c7-4f13-9d3a-72997fb07ca5" -> null
+              - sse_algorithm     = "aws:kms" -> null
+            }
+        }
+    }
+
+  # aws_s3_bucket_versioning.example_s3_versioning will be destroyed
+  - resource "aws_s3_bucket_versioning" "example_s3_versioning" {
+      - bucket = "jiham-k-test" -> null
+      - id     = "jiham-k-test" -> null
+
+      - versioning_configuration {
+          - status = "Enabled" -> null
+        }
+    }
+
+  # aws_s3_object.lottery_csv will be destroyed
+  - resource "aws_s3_object" "lottery_csv" {
+      - bucket                 = "jiham-k-test" -> null
+      - bucket_key_enabled     = false -> null
+      - content_type           = "text/csv" -> null
+      - etag                   = "b30e04b0ea368c0ad129ef481986595b" -> null
+      - force_destroy          = false -> null
+      - id                     = "example_file.csv" -> null
+      - key                    = "example_file.csv" -> null
+      - kms_key_id             = "arn:aws:kms:us-east-2:211125356430:key/d2c788b8-78c7-4f13-9d3a-72997fb07ca5" -> null
+      - metadata               = {} -> null
+      - server_side_encryption = "aws:kms" -> null
+      - source                 = "../../data/Lottery_Mega_Millions_Winning_Numbers__Beginning_2002.csv" -> null
+      - storage_class          = "STANDARD" -> null
+      - tags                   = {} -> null
+      - tags_all               = {} -> null
+      - version_id             = "9JcQfoLEjkV1M88p.IvBcbxfMvlbdkUr" -> null
+    }
+
+  # aws_security_group.superset_lb_sg will be destroyed
+  - resource "aws_security_group" "superset_lb_sg" {
+      - arn                    = "arn:aws:ec2:us-east-2:211125356430:security-group/sg-0f643b5e59132f03c" -> null
+      - description            = "ALB security group" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0f643b5e59132f03c" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 80
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 80
+            },
+        ] -> null
+      - name                   = "superset-lb-sg" -> null
+      - owner_id               = "211125356430" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all               = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                 = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # aws_security_group.superset_sg will be destroyed
+  - resource "aws_security_group" "superset_sg" {
+      - arn                    = "arn:aws:ec2:us-east-2:211125356430:security-group/sg-04b3afdc74f1c1644" -> null
+      - description            = "Security group for Superset ECS tasks" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-04b3afdc74f1c1644" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = ""
+              - from_port        = 8088
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 8088
+            },
+        ] -> null
+      - name                   = "superset-k-sg" -> null
+      - owner_id               = "211125356430" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all               = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                 = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # module.vpc.aws_default_network_acl.this[0] will be destroyed
+  - resource "aws_default_network_acl" "this" {
+      - arn                    = "arn:aws:ec2:us-east-2:211125356430:network-acl/acl-0dfeab17cbe30c818" -> null
+      - default_network_acl_id = "acl-0dfeab17cbe30c818" -> null
+      - id                     = "acl-0dfeab17cbe30c818" -> null
+      - owner_id               = "211125356430" -> null
+      - subnet_ids             = [
+          - "subnet-03a50499fc00b9cbc",
+          - "subnet-04fb9887a7d2737f7",
+          - "subnet-0bd73dbe52186e6db",
+          - "subnet-0c7072ce65f5ac2ba",
+          - "subnet-0d80d9c71b023fde0",
+          - "subnet-0fd7910f4a33e07fa",
+        ] -> null
+      - tags                   = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all               = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                 = "vpc-0f97fdc683edc5c60" -> null
+
+      - egress {
+          - action          = "allow" -> null
+          - from_port       = 0 -> null
+          - icmp_code       = 0 -> null
+          - icmp_type       = 0 -> null
+          - ipv6_cidr_block = "::/0" -> null
+          - protocol        = "-1" -> null
+          - rule_no         = 101 -> null
+          - to_port         = 0 -> null
+        }
+      - egress {
+          - action     = "allow" -> null
+          - cidr_block = "0.0.0.0/0" -> null
+          - from_port  = 0 -> null
+          - icmp_code  = 0 -> null
+          - icmp_type  = 0 -> null
+          - protocol   = "-1" -> null
+          - rule_no    = 100 -> null
+          - to_port    = 0 -> null
+        }
+
+      - ingress {
+          - action          = "allow" -> null
+          - from_port       = 0 -> null
+          - icmp_code       = 0 -> null
+          - icmp_type       = 0 -> null
+          - ipv6_cidr_block = "::/0" -> null
+          - protocol        = "-1" -> null
+          - rule_no         = 101 -> null
+          - to_port         = 0 -> null
+        }
+      - ingress {
+          - action     = "allow" -> null
+          - cidr_block = "0.0.0.0/0" -> null
+          - from_port  = 0 -> null
+          - icmp_code  = 0 -> null
+          - icmp_type  = 0 -> null
+          - protocol   = "-1" -> null
+          - rule_no    = 100 -> null
+          - to_port    = 0 -> null
+        }
+    }
+
+  # module.vpc.aws_default_route_table.default[0] will be destroyed
+  - resource "aws_default_route_table" "default" {
+      - arn                    = "arn:aws:ec2:us-east-2:211125356430:route-table/rtb-047183d0e28b94b0a" -> null
+      - default_route_table_id = "rtb-047183d0e28b94b0a" -> null
+      - id                     = "rtb-047183d0e28b94b0a" -> null
+      - owner_id               = "211125356430" -> null
+      - propagating_vgws       = [] -> null
+      - route                  = [] -> null
+      - tags                   = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all               = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                 = "vpc-0f97fdc683edc5c60" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+          - update = "5m" -> null
+        }
+    }
+
+  # module.vpc.aws_default_security_group.this[0] will be destroyed
+  - resource "aws_default_security_group" "this" {
+      - arn                    = "arn:aws:ec2:us-east-2:211125356430:security-group/sg-0c6e43f33bc201939" -> null
+      - description            = "default VPC security group" -> null
+      - egress                 = [] -> null
+      - id                     = "sg-0c6e43f33bc201939" -> null
+      - ingress                = [] -> null
+      - name                   = "default" -> null
+      - owner_id               = "211125356430" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all               = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                 = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # module.vpc.aws_eip.nat[0] will be destroyed
+  - resource "aws_eip" "nat" {
+      - allocation_id        = "eipalloc-0f93760b6bdd30ba8" -> null
+      - association_id       = "eipassoc-0d0956d54a72293a1" -> null
+      - domain               = "vpc" -> null
+      - id                   = "eipalloc-0f93760b6bdd30ba8" -> null
+      - network_border_group = "us-east-2" -> null
+      - network_interface    = "eni-0b29a4db93e4af26b" -> null
+      - private_dns          = "ip-10-0-48-55.us-east-2.compute.internal" -> null
+      - private_ip           = "10.0.48.55" -> null
+      - public_dns           = "ec2-3-142-204-24.us-east-2.compute.amazonaws.com" -> null
+      - public_ip            = "3.142.204.24" -> null
+      - public_ipv4_pool     = "amazon" -> null
+      - tags                 = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all             = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc                  = true -> null
+    }
+
+  # module.vpc.aws_internet_gateway.this[0] will be destroyed
+  - resource "aws_internet_gateway" "this" {
+      - arn      = "arn:aws:ec2:us-east-2:211125356430:internet-gateway/igw-0c47bd06812471115" -> null
+      - id       = "igw-0c47bd06812471115" -> null
+      - owner_id = "211125356430" -> null
+      - tags     = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id   = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # module.vpc.aws_nat_gateway.this[0] will be destroyed
+  - resource "aws_nat_gateway" "this" {
+      - allocation_id                      = "eipalloc-0f93760b6bdd30ba8" -> null
+      - association_id                     = "eipassoc-0d0956d54a72293a1" -> null
+      - connectivity_type                  = "public" -> null
+      - id                                 = "nat-03815849f6f2fb8b7" -> null
+      - network_interface_id               = "eni-0b29a4db93e4af26b" -> null
+      - private_ip                         = "10.0.48.55" -> null
+      - public_ip                          = "3.142.204.24" -> null
+      - secondary_allocation_ids           = [] -> null
+      - secondary_private_ip_address_count = 0 -> null
+      - secondary_private_ip_addresses     = [] -> null
+      - subnet_id                          = "subnet-0fd7910f4a33e07fa" -> null
+      - tags                               = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all                           = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+    }
+
+  # module.vpc.aws_route.private_nat_gateway[0] will be destroyed
+  - resource "aws_route" "private_nat_gateway" {
+      - destination_cidr_block = "0.0.0.0/0" -> null
+      - id                     = "r-rtb-0744c5f9b011ff88c1080289494" -> null
+      - nat_gateway_id         = "nat-03815849f6f2fb8b7" -> null
+      - origin                 = "CreateRoute" -> null
+      - route_table_id         = "rtb-0744c5f9b011ff88c" -> null
+      - state                  = "active" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc.aws_route.public_internet_gateway[0] will be destroyed
+  - resource "aws_route" "public_internet_gateway" {
+      - destination_cidr_block = "0.0.0.0/0" -> null
+      - gateway_id             = "igw-0c47bd06812471115" -> null
+      - id                     = "r-rtb-00436ce16e8ecd0881080289494" -> null
+      - origin                 = "CreateRoute" -> null
+      - route_table_id         = "rtb-00436ce16e8ecd088" -> null
+      - state                  = "active" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc.aws_route_table.private[0] will be destroyed
+  - resource "aws_route_table" "private" {
+      - arn              = "arn:aws:ec2:us-east-2:211125356430:route-table/rtb-0744c5f9b011ff88c" -> null
+      - id               = "rtb-0744c5f9b011ff88c" -> null
+      - owner_id         = "211125356430" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - carrier_gateway_id         = ""
+              - cidr_block                 = "0.0.0.0/0"
+              - core_network_arn           = ""
+              - destination_prefix_list_id = ""
+              - egress_only_gateway_id     = ""
+              - gateway_id                 = ""
+              - ipv6_cidr_block            = ""
+              - local_gateway_id           = ""
+              - nat_gateway_id             = "nat-03815849f6f2fb8b7"
+              - network_interface_id       = ""
+              - transit_gateway_id         = ""
+              - vpc_endpoint_id            = ""
+              - vpc_peering_connection_id  = ""
+            },
+        ] -> null
+      - tags             = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all         = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id           = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # module.vpc.aws_route_table.public[0] will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:us-east-2:211125356430:route-table/rtb-00436ce16e8ecd088" -> null
+      - id               = "rtb-00436ce16e8ecd088" -> null
+      - owner_id         = "211125356430" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - carrier_gateway_id         = ""
+              - cidr_block                 = "0.0.0.0/0"
+              - core_network_arn           = ""
+              - destination_prefix_list_id = ""
+              - egress_only_gateway_id     = ""
+              - gateway_id                 = "igw-0c47bd06812471115"
+              - ipv6_cidr_block            = ""
+              - local_gateway_id           = ""
+              - nat_gateway_id             = ""
+              - network_interface_id       = ""
+              - transit_gateway_id         = ""
+              - vpc_endpoint_id            = ""
+              - vpc_peering_connection_id  = ""
+            },
+        ] -> null
+      - tags             = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all         = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id           = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # module.vpc.aws_route_table_association.private[0] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-087ad08a076e0177d" -> null
+      - route_table_id = "rtb-0744c5f9b011ff88c" -> null
+      - subnet_id      = "subnet-04fb9887a7d2737f7" -> null
+    }
+
+  # module.vpc.aws_route_table_association.private[1] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-02c7574a683645f09" -> null
+      - route_table_id = "rtb-0744c5f9b011ff88c" -> null
+      - subnet_id      = "subnet-03a50499fc00b9cbc" -> null
+    }
+
+  # module.vpc.aws_route_table_association.private[2] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-044ad58594443a71f" -> null
+      - route_table_id = "rtb-0744c5f9b011ff88c" -> null
+      - subnet_id      = "subnet-0d80d9c71b023fde0" -> null
+    }
+
+  # module.vpc.aws_route_table_association.public[0] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-0e655a828f0097ea8" -> null
+      - route_table_id = "rtb-00436ce16e8ecd088" -> null
+      - subnet_id      = "subnet-0fd7910f4a33e07fa" -> null
+    }
+
+  # module.vpc.aws_route_table_association.public[1] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-05dece102d5a55afc" -> null
+      - route_table_id = "rtb-00436ce16e8ecd088" -> null
+      - subnet_id      = "subnet-0bd73dbe52186e6db" -> null
+    }
+
+  # module.vpc.aws_route_table_association.public[2] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-07c688dc8f18987c5" -> null
+      - route_table_id = "rtb-00436ce16e8ecd088" -> null
+      - subnet_id      = "subnet-0c7072ce65f5ac2ba" -> null
+    }
+
+  # module.vpc.aws_subnet.private[0] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-2:211125356430:subnet/subnet-04fb9887a7d2737f7" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2a" -> null
+      - availability_zone_id                           = "use2-az1" -> null
+      - cidr_block                                     = "10.0.0.0/20" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-04fb9887a7d2737f7" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "211125356430" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all                                       = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                                         = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # module.vpc.aws_subnet.private[1] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-2:211125356430:subnet/subnet-03a50499fc00b9cbc" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2b" -> null
+      - availability_zone_id                           = "use2-az2" -> null
+      - cidr_block                                     = "10.0.16.0/20" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-03a50499fc00b9cbc" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "211125356430" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all                                       = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                                         = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # module.vpc.aws_subnet.private[2] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-2:211125356430:subnet/subnet-0d80d9c71b023fde0" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2c" -> null
+      - availability_zone_id                           = "use2-az3" -> null
+      - cidr_block                                     = "10.0.32.0/20" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0d80d9c71b023fde0" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "211125356430" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all                                       = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                                         = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # module.vpc.aws_subnet.public[0] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-2:211125356430:subnet/subnet-0fd7910f4a33e07fa" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2a" -> null
+      - availability_zone_id                           = "use2-az1" -> null
+      - cidr_block                                     = "10.0.48.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0fd7910f4a33e07fa" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "211125356430" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all                                       = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                                         = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # module.vpc.aws_subnet.public[1] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-2:211125356430:subnet/subnet-0bd73dbe52186e6db" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2b" -> null
+      - availability_zone_id                           = "use2-az2" -> null
+      - cidr_block                                     = "10.0.49.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0bd73dbe52186e6db" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "211125356430" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all                                       = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                                         = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # module.vpc.aws_subnet.public[2] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-2:211125356430:subnet/subnet-0c7072ce65f5ac2ba" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-2c" -> null
+      - availability_zone_id                           = "use2-az3" -> null
+      - cidr_block                                     = "10.0.50.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0c7072ce65f5ac2ba" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "211125356430" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all                                       = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - vpc_id                                         = "vpc-0f97fdc683edc5c60" -> null
+    }
+
+  # module.vpc.aws_vpc.this[0] will be destroyed
+  - resource "aws_vpc" "this" {
+      - arn                                  = "arn:aws:ec2:us-east-2:211125356430:vpc/vpc-0f97fdc683edc5c60" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.0.0.0/16" -> null
+      - default_network_acl_id               = "acl-0dfeab17cbe30c818" -> null
+      - default_route_table_id               = "rtb-047183d0e28b94b0a" -> null
+      - default_security_group_id            = "sg-0c6e43f33bc201939" -> null
+      - dhcp_options_id                      = "dopt-02f3d1b406b083cbf" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-0f97fdc683edc5c60" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-047183d0e28b94b0a" -> null
+      - owner_id                             = "211125356430" -> null
+      - tags                                 = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+      - tags_all                             = {
+          - "Example"    = "superset-k"
+          - "Name"       = "superset-k"
+          - "Repository" = "https://superset.apache.org"
+        } -> null
+    }
+
+Plan: 0 to add, 0 to change, 58 to destroy.
+
+───────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
