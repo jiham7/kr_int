@@ -61,4 +61,4 @@ password: admin
 I have added the terraform plan -destroy as terraform-destroy-plan.txt to show all resources deployed
 
 ## SQL queries
-I have added the sql queries in teh SQL-queries.txt
+I have added the sql queries in the SQL-queries.txt
