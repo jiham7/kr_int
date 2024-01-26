@@ -44,6 +44,8 @@ To deploy this infrastructure, follow these steps:
 5. Run the following commands to initialize Terraform in terraform/staging and create the infrastructure:
 
    terraform init
+
+
    terraform apply
 
 ## Live Superset
@@ -51,6 +53,8 @@ This is the live superset DNS:
 http://superset-alb-315046454.us-east-2.elb.amazonaws.com/
 
 username: admin
+
+
 password: admin
 
 ## Terraform Plan
